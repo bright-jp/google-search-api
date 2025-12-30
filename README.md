@@ -1,14 +1,14 @@
 # Google Search API
 
-[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.com/products/serp-api/google-search) 
+[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.jp/products/serp-api/google-search) 
 
-> ⚠️ As of January 2025, [Google requires JavaScript](https://techcrunch.com/2025/01/17/google-begins-requiring-javascript-for-google-search/) to render search results. This update aims to block traditional bots, scrapers, and SEO tools that rely on non-JavaScript-based methods. As a result, businesses using Google Search for market research or ranking analysis must adopt tools that support JavaScript rendering.
+> ⚠️ 2025年1月時点で、検索結果をレンダリングするために[GoogleはJavaScriptを必須としています](https://techcrunch.com/2025/01/17/google-begins-requiring-javascript-for-google-search/)。この更新は、JavaScript非対応の手法に依存する従来型のボット、スクレイパー、SEOツールをブロックすることを目的としています。その結果、市場調査やランキング分析のためにGoogle Searchを利用する企業は、JavaScriptレンダリングに対応したツールを採用する必要があります。
 
 
-This repository provides two approaches for collecting Google SERP data:
+このリポジトリでは、Google SERPデータを収集するための2つのアプローチを提供しています。
 
-1. A free, small-scale scraper suitable for basic data collection
-2. An enterprise-grade API solution built for high-volume and robust data needs
+1. 基本的なデータ収集に適した、無料の小規模スクレイパー
+2. 大量かつ堅牢なデータニーズ向けに構築された、エンタープライズグレードのAPIソリューション
 
 
 ## Table of Contents
@@ -37,17 +37,17 @@ This repository provides two approaches for collecting Google SERP data:
 
 
 ## Free Scraper
-A lightweight Google scraper for basic data collection needs.
+基本的なデータ収集ニーズ向けの、軽量なGoogleスクレイパーです。
 
 <img width="700" alt="google-search-result" src="https://github.com/luminati-io/google-search-api/blob/main/images/416310595-58573147-5ac2-4cb3-bb5e-295d76f6972c.png" />
 
 ### Input Parameters
 
-- **File:** List of search terms to query in Google (required)
-- **Pages:** Number of Google pages to scrape data from
+- **File:** Googleでクエリする検索語のリスト（必須）
+- **Pages:** データをスクレイピングするGoogleページ数
 
 ### Implementation
-Modify these parameters in the [Python file](https://github.com/luminati-io/Google-Search-API/blob/main/free_google_scraper/google_serp.py):
+これらのパラメータを、[Python file](https://github.com/luminati-io/Google-Search-API/blob/main/free_google_scraper/google_serp.py)で変更してください。
 
 ```python
 HEADLESS = False        
@@ -61,7 +61,7 @@ SEARCH_TERMS = [
 PAGES_PER_TERM = 3      
 ```
 
-💡 **Tip:** Set `HEADLESS = False` to help avoid Google's detection mechanisms.
+💡 **Tip:** `HEADLESS = False` に設定すると、Googleの検知メカニズムを回避しやすくなります。
 
 ### Sample Output
 <img width="700" alt="google-serp-data" src="https://github.com/luminati-io/google-search-api/blob/main/images/416109839-c7048fc9-44c3-4553-8117-2b238d354f70.png" />
@@ -69,34 +69,34 @@ PAGES_PER_TERM = 3
 
 ### Limitations
 
-Google implements several anti-scraping measures:
+Googleは、複数のアンチスクレイピング対策を実装しています。
 
-1. **CAPTCHAs:** Used to differentiate between humans and bots
-2. **IP Blocks:** Temporary or permanent bans for suspicious activity
-3. **Rate Limiting:** Rapid requests may trigger blocks
-4. **Geotargeting:** Results vary by location, language, and device
-5. **Honeypot Traps:** Hidden elements to detect automated access
+1. **CAPTCHAs:** 人間とボットを区別するために使用されます
+2. **IP Blocks:** 不審なアクティビティに対する一時的または恒久的なBANです
+3. **Rate Limiting:** 急速なリクエストはブロックを引き起こす可能性があります
+4. **Geotargeting:** 結果は場所、言語、デバイスによって変化します
+5. **Honeypot Traps:** 自動アクセスを検出するための隠し要素です
 
-After multiple requests, you'll likely encounter Google's CAPTCHA challenge:
+複数回リクエストすると、おそらくGoogleのCAPTCHAチャレンジに遭遇します。
 
 <img width="700" alt="google-captcha" src="https://github.com/luminati-io/google-search-api/blob/main/images/414117571-21ab3e9f-1162-4aef-9e22-fb08491dd928.png" />
 
 ## Bright Data Google Search API
-[Bright Data's Google Search API](https://brightdata.com/products/serp-api/google-search) provides real-user search results from Google using customizable search parameters. Built on the same advanced technology as the [SERP API](https://brightdata.com/products/serp-api), it delivers high success rates and robust performance for scraping publicly available data at scale.
+[Bright Data's Google Search API](https://brightdata.jp/products/serp-api/google-search) は、カスタマイズ可能な検索パラメータを使用して、Googleから実ユーザーの検索結果を提供します。[SERP API](https://brightdata.jp/products/serp-api)と同じ先進技術に基づいて構築されており、公開データを大規模にスクレイピングする際に、高い成功率と堅牢なパフォーマンスを提供します。
 
 
 ### Key Features
 
-- High Success Rates, even with large volumes
-- Pay only for successful requests
-- Fast response time - under 5 seconds
-- Geolocation targeting – Extract data from any country, city, or device
-- Output formats – Retrieve data in JSON or raw HTML
-- Multiple search types – News, images, shopping, jobs, etc
-- Asynchronous requests – Fetch results in batches
-- Built for scale – Handles high traffic and peak loads
+- 大量でも高い成功率
+- 成功したリクエストに対してのみ課金
+- 高速なレスポンスタイム（5秒未満）
+- ジオロケーションターゲティング – 任意の国・都市・デバイスからデータを抽出
+- 出力形式 – JSONまたは生HTMLでデータを取得
+- 複数の検索タイプ – News、images、shopping、jobsなど
+- 非同期リクエスト – 結果をバッチで取得
+- スケール向けに設計 – 高トラフィックとピーク負荷に対応
 
-📌 Test it for free in our [SERP Playground](https://brightdata.com/products/serp-api/google-search):
+📌 [SERP Playground](https://brightdata.jp/products/serp-api/google-search)で無料でお試しください。
 
 <img width="700" alt="bright-data-serp-api-playground" src="https://github.com/luminati-io/google-search-api/blob/main/images/416966701-8d516e08-37a1-4723-bf12-9a9da6a13b1a.png" />
 
@@ -104,16 +104,16 @@ After multiple requests, you'll likely encounter Google's CAPTCHA challenge:
 ### Getting Started
 
 1. **Prerequisites:**
-    - Create a [Bright Data account](https://brightdata.com/) (new users receive a $5 credit)
-    - Obtain your [API key](https://docs.brightdata.com/general/account/api-token)
-2. **Setup:** Follow the [step-by-step guide](https://github.com/luminati-io/Google-Search-API/blob/main/setup_serp_api.md) to integrate the SERP API into your Bright Data account
+    - [Bright Data account](https://brightdata.jp/)を作成してください（新規ユーザーには$5クレジットが付与されます）
+    - [API key](https://docs.brightdata.com/general/account/api-token)を取得してください
+2. **Setup:** [step-by-step guide](https://github.com/luminati-io/Google-Search-API/blob/main/setup_serp_api.md)に従って、Bright DataアカウントにSERP APIを統合してください
 3. **Implementation Methods:**
     - Direct API Access
     - Native Proxy-Based Access
 
 
 ### Direct API Access
-The simplest method is to make a direct request to the API.
+最も簡単な方法は、APIに直接リクエストすることです。
 
 **cURL Example**
 ```bash
@@ -150,14 +150,14 @@ with open("serp_direct_api.json", "w") as file:
 print("Response saved to 'serp_direct_api.json'.")
 ```
 
-👉 View [full JSON output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_direct_api.json)
+👉 [full JSON output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_direct_api.json)をご覧ください。
 
-> **Note**: Use `brd_json=1` for parsed JSON or `brd_json=html` for parsed JSON + full nested HTML.
+> **Note**: パース済みJSONには `brd_json=1` を使用し、パース済みJSON + 完全にネストされたHTMLには `brd_json=html` を使用してください。
 
-Learn more about parsing search results in our [SERP API Parsing Guide](https://docs.brightdata.com/scraping-automation/serp-api/parsing-search-results).
+検索結果のパースについて詳しくは、[SERP API Parsing Guide](https://docs.brightdata.com/scraping-automation/serp-api/parsing-search-results)をご覧ください。
 
 ### Native Proxy-Based Access
-Alternatively, you can use our proxy routing method.
+代わりに、プロキシルーティング方式を使用することもできます。
 
 **cURL Example**
 ```bash
@@ -192,9 +192,9 @@ with open("serp_native_proxy.html", "w", encoding="utf-8") as file:
 print("Response saved to 'serp_native_proxy.html'.")
 ```
 
-👉 View [full HTML output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_native_proxy.html)
+👉 [full HTML output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_native_proxy.html)をご覧ください。
 
-For production, load Bright Data’s SSL certificate (see our [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)).
+本番環境では、Bright DataのSSL証明書を読み込んでください（[SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)を参照してください）。
 
 ## Advanced Features
 
@@ -203,10 +203,10 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
 
 
 1. `gl` (Country Code)
-    - Two-letter country code that determines the country for search results
-    - Simulates a search as if made from a specific country
+    - 検索結果の国を決定する2文字の国コードです
+    - 特定の国から行われた検索をシミュレートします
     
-    Example: Search for restaurants in France
+    Example: フランスでレストランを検索する
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -215,10 +215,10 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
     ```
     
 2. `hl` (Language Code)
-    - Two-letter language code that sets the language of page content
-    - Affects the interface and search results language
+    - ページコンテンツの言語を設定する2文字の言語コードです
+    - インターフェースおよび検索結果の言語に影響します
     
-    Example: Search for sushi restaurants in Japan (results in Japanese)
+    Example: 日本で寿司店を検索する（結果は日本語）
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -226,7 +226,7 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
      "https://www.google.com/search?q=best+sushi+restaurants+in+tokyo&hl=ja"
     ```
     
-    You can use both parameters together for better localization:
+    より適切なローカライズのために、両方のパラメータを併用できます。
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -238,14 +238,14 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
 <img width="700" alt="bright-data-google-search-api-screenshot-search-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416280410-49853108-5e3d-4062-831b-8d55711d5f54.png" />
 
 1. `tbm` (Search Category)
-    - Specifies a particular search type (images, news, etc.)
+    - 特定の検索タイプ（画像、ニュースなど）を指定します
     - **Options**:
         - `tbm=isch` → **Images**
         - `tbm=shop` → **Shopping**
         - `tbm=nws` → **News**
         - `tbm=vid` → **Videos**
     
-    **Example** (Shopping search):
+    **Example**（Shopping検索）:
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -254,8 +254,8 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
     ```
     
 2. `ibp` (Jobs Search Parameter)
-    - Use specifically for jobs-related searches
-    - Example: `ibp=htl;jobs` returns job listings
+    - 求人関連の検索に特化して使用します
+    - 例: `ibp=htl;jobs` は求人リストを返します
     
     **Example**:
     
@@ -267,16 +267,16 @@ For production, load Bright Data’s SSL certificate (see our [SSL Certificate G
 
 ### Pagination
 
-Navigate through pages of results or adjust the number of displayed results:
+結果ページ間を移動したり、表示される結果数を調整したりします。
 
 1. `start`
-    - Defines the starting point for search results
+    - 検索結果の開始位置を定義します
     - Examples:
-        - `start=0` (default) - First page
-        - `start=10` - Second page (results 11-20)
-        - `start=20` - Third page (results 21-30)
+        - `start=0`（default）- 1ページ目
+        - `start=10` - 2ページ目（結果11-20）
+        - `start=20` - 3ページ目（結果21-30）
     
-    **Example** (Start from the 11th result):
+    **Example**（11番目の結果から開始）:
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -285,12 +285,12 @@ Navigate through pages of results or adjust the number of displayed results:
     ```
     
 2. `num`
-    - Defines how many results to return per page
+    - 1ページあたりに返す結果数を定義します
     - Examples:
-        - `num=10` (default) - Returns 10 results
-        - `num=50` - Returns 50 results
+        - `num=10`（default）- 10件の結果を返します
+        - `num=50` - 50件の結果を返します
     
-    **Example** (Return 40 results):
+    **Example**（40件の結果を返す）:
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -302,12 +302,12 @@ Navigate through pages of results or adjust the number of displayed results:
 ### Geo-Location
 <img width="700" alt="bright-data-google-search-api-screenshot-geolocation" src="https://github.com/luminati-io/google-search-api/blob/main/images/416279186-af64c770-0c8a-4007-9415-304d2e0c0fe8.png" />
 
-The `uule` parameter customizes search results based on a specific location:
+`uule` パラメータは、特定の場所に基づいて検索結果をカスタマイズします。
 
-- It requires an encoded string, not plain text.
-- Locate the raw location string in the Canonical Name column of [Google's geotargeting CSV](https://developers.google.com/adwords/api/docs/appendix/geotargeting).
-- Convert the raw string into the encoded format using a third-party converter or a built-in library.
-- Include the encoded string in your API request as the value for `uule`.
+- プレーンテキストではなく、エンコードされた文字列が必要です。
+- [Google's geotargeting CSV](https://developers.google.com/adwords/api/docs/appendix/geotargeting)のCanonical Name列で、生のロケーション文字列を見つけてください。
+- サードパーティのコンバーターまたは組み込みライブラリを使用して、生の文字列をエンコード形式に変換してください。
+- APIリクエストで、`uule` の値としてエンコード文字列を含めてください。
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -320,7 +320,7 @@ curl --proxy brd.superproxy.io:33335 \
 <img width="700" alt="bright-data-google-search-api-screenshot-device-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416278511-cf0f203f-5d62-4eb9-9d28-7a50d75c7a00.png" />
 
 
-Use the `brd_mobile` parameter to simulate requests from specific devices:
+`brd_mobile` パラメータを使用して、特定デバイスからのリクエストをシミュレートします。
 
 | Value | Device | User-Agent Type |
 | --- | --- | --- |
@@ -342,13 +342,13 @@ curl --proxy brd.superproxy.io:33335 \
 ### Browser Type
 <img width="700" alt="bright-data-google-search-api-screenshot-browser-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416277969-df382cb0-0eb2-4fb1-982c-2fa3401cc83a.png" />
 
-Use the `brd_browser` parameter to simulate requests from specific browsers:
+`brd_browser` パラメータを使用して、特定ブラウザからのリクエストをシミュレートします。
 
 - `brd_browser=chrome` — Google Chrome
 - `brd_browser=safari` — Safari
-- `brd_browser=firefox` — Mozilla Firefox (not compatible with `brd_mobile=1`)
+- `brd_browser=firefox` — Mozilla Firefox（`brd_mobile=1` と互換性がありません）
 
-If not specified, the API uses a random browser.
+指定しない場合、APIはランダムなブラウザを使用します。
 
 **Example**:
 
@@ -358,7 +358,7 @@ curl --proxy brd.superproxy.io:33335 \
      "https://www.google.com/search?q=best+gaming+laptops&brd_browser=chrome"
 ```
 
-**Example** (Combining browser and device type):
+**Example**（ブラウザとデバイスタイプの組み合わせ）:
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -368,13 +368,13 @@ curl --proxy brd.superproxy.io:33335 \
 
 ### Parsing Results
 
-Receive search results in a structured format using the `brd_json` parameter:
+`brd_json` パラメータを使用して、検索結果を構造化形式で受け取ります。
 
 - **Options**:
-    - `brd_json=1` - Returns results in parsed JSON format
-    - `brd_json=html` - Returns JSON with an additional `"html"` field containing raw HTML
+    - `brd_json=1` - パース済みJSON形式で結果を返します
+    - `brd_json=html` - 生HTMLを含む追加の `"html"` フィールドを持つJSONを返します
 
-Example (JSON output):
+Example（JSON output）:
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -382,7 +382,7 @@ curl --proxy brd.superproxy.io:33335 \
      "https://www.google.com/search?q=best+hotels+in+new+york&brd_json=1"
 ```
 
-Example (JSON with raw HTML):
+Example（生HTML付きJSON）:
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -390,7 +390,7 @@ curl --proxy brd.superproxy.io:33335 \
      "https://www.google.com/search?q=top+restaurants+in+paris&brd_json=html"
 ```
 
-Learn more in our [SERP API Parsing Guide](https://docs.brightdata.com/scraping-automation/serp-api/parsing-search-results).
+詳細は[ SERP API Parsing Guide](https://docs.brightdata.com/scraping-automation/serp-api/parsing-search-results)をご覧ください。
 
 
 ### Hotel Search
@@ -398,16 +398,16 @@ Learn more in our [SERP API Parsing Guide](https://docs.brightdata.com/scraping-
 <img width="700" alt="bright-data-google-search-api-screenshot-google-hotels-search" src="https://github.com/luminati-io/google-search-api/blob/main/images/416277071-0859191a-47c0-4373-b3af-a1bc04ea54b1.png" />
 
 
-Refine hotel searches with these parameters:
+以下のパラメータでホテル検索を絞り込めます。
 
 1. `hotel_occupancy` (Number of Guests)
-    - Sets the number of guests (up to 4)
+    - 宿泊人数を設定します（最大4）
     - Examples:
-        - `hotel_occupancy=1` → For 1 guest
-        - `hotel_occupancy=2` → For 2 guests (default)
-        - `hotel_occupancy=4` → For 4 guests
+        - `hotel_occupancy=1` → 1名
+        - `hotel_occupancy=2` → 2名（default）
+        - `hotel_occupancy=4` → 4名
     
-    **Example** (Search for hotels in New York for 4 guests):
+    **Example**（ニューヨークのホテルを4名で検索）:
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -416,10 +416,10 @@ Refine hotel searches with these parameters:
     ```
     
 2. `hotel_dates` (Check-in & Check-out Dates)
-    - Filters results for specific date ranges
+    - 特定の日付範囲で結果をフィルタリングします
     - Format: YYYY-MM-DD, YYYY-MM-DD
     
-    **Example** (Search for hotels in Paris from May 1 to May 3, 2025):
+    **Example**（2025年5月1日から5月3日までのパリのホテルを検索）:
     
     ```bash
     curl --proxy brd.superproxy.io:33335 \
@@ -437,11 +437,11 @@ Refine hotel searches with these parameters:
 
 ### Parallel Searches
 
-Send multiple search requests simultaneously within the same peer and session—ideal for comparing results.
+同一のpeerおよびセッション内で、複数の検索リクエストを同時に送信します。結果の比較に最適です。
 
-1. Send a POST request with a `multi` array containing search variations
-2. Get a `response_id` for later result retrieval
-3. Retrieve results using the `response_id` once processing completes
+1. 検索バリエーションを含む `multi` 配列でPOSTリクエストを送信します
+2. 後で結果を取得するための `response_id` を取得します
+3. 処理完了後、`response_id` を使用して結果を取得します
 
 **Step 1: Send Parallel Requests**
 
@@ -469,7 +469,7 @@ curl -v --compressed \
      -H "Authorization: Bearer API_TOKEN"
 ```
 
-You can also search for multiple keywords in one request:
+1つのリクエストで複数のキーワードを検索することもできます。
 
 ```bash
 {
@@ -480,13 +480,13 @@ You can also search for multiple keywords in one request:
 }
 ```
 
-Learn more about asynchronous requests [here](https://docs.brightdata.com/scraping-automation/serp-api/asynchronous-requests).
+非同期リクエストについて詳しくは[こちら](https://docs.brightdata.com/scraping-automation/serp-api/asynchronous-requests)をご覧ください。
 
 ### AI Overview
 
 <img width="700" alt="bright-data-google-search-api-screenshot-google-ai-overview" src="https://github.com/luminati-io/google-search-api/blob/main/images/416276209-3c7be724-e8d9-45ed-b781-017b1cbec9d4.png" />
 
-Google sometimes includes AI-generated summaries (AI Overviews) at the top of search results. Use `brd_ai_mode=1` to increase the chances of seeing these AI-generated overviews:
+Googleは、検索結果の上部にAI生成の要約（AI Overviews）を含めることがあります。`brd_ai_mode=1` を使用すると、これらのAI生成オーバービューが表示される可能性が高まります。
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -498,14 +498,14 @@ curl --proxy brd.superproxy.io:33335 \
 ## Support & Resources
 
 - **Documentation:** [SERP API Docs](https://docs.brightdata.com/scraping-automation/serp-api/)
-- **SEO Use Cases:** [SEO Tracking and Insights](https://brightdata.com/use-cases/serp-tracking)
+- **SEO Use Cases:** [SEO Tracking and Insights](https://brightdata.jp/use-cases/serp-tracking)
 - **Other Guides:**
     - [SERP API](https://github.com/luminati-io/serp-api)
     - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
     - [Google Maps Scraper](https://github.com/luminati-io/Google-Maps-Scraper)
     - [Google News Scraper](https://github.com/luminati-io/Google-News-Scraper)
 - **Interesting Reads:**
-    - [Best SERP APIs](https://brightdata.com/blog/web-data/best-serp-apis)
-    - [Build a RAG Chatbot with SERP API](https://brightdata.com/blog/web-data/build-a-rag-chatbot)
-    - [Scrape Google Search with Python](https://brightdata.com/blog/web-data/scraping-google-with-python)
+    - [Best SERP APIs](https://brightdata.jp/blog/web-data/best-serp-apis)
+    - [Build a RAG Chatbot with SERP API](https://brightdata.jp/blog/web-data/build-a-rag-chatbot)
+    - [Scrape Google Search with Python](https://brightdata.jp/blog/web-data/scraping-google-with-python)
 - **Technical Support:** [Contact Us](mailto:support@brightdata.com)
