@@ -39,7 +39,7 @@
 ## Free Scraper
 基本的なデータ収集ニーズ向けの、軽量なGoogleスクレイパーです。
 
-<img width="700" alt="google-search-result" src="https://github.com/luminati-io/google-search-api/blob/main/images/416310595-58573147-5ac2-4cb3-bb5e-295d76f6972c.png" />
+<img width="700" alt="google-search-result" src="https://github.com/bright-jp/google-search-api/blob/main/images/416310595-58573147-5ac2-4cb3-bb5e-295d76f6972c.png" />
 
 ### Input Parameters
 
@@ -47,7 +47,7 @@
 - **Pages:** データをスクレイピングするGoogleページ数
 
 ### Implementation
-これらのパラメータを、[Python file](https://github.com/luminati-io/Google-Search-API/blob/main/free_google_scraper/google_serp.py)で変更してください。
+これらのパラメータを、[Python file](https://github.com/bright-jp/Google-Search-API/blob/main/free_google_scraper/google_serp.py)で変更してください。
 
 ```python
 HEADLESS = False        
@@ -64,7 +64,7 @@ PAGES_PER_TERM = 3
 💡 **Tip:** `HEADLESS = False` に設定すると、Googleの検知メカニズムを回避しやすくなります。
 
 ### Sample Output
-<img width="700" alt="google-serp-data" src="https://github.com/luminati-io/google-search-api/blob/main/images/416109839-c7048fc9-44c3-4553-8117-2b238d354f70.png" />
+<img width="700" alt="google-serp-data" src="https://github.com/bright-jp/google-search-api/blob/main/images/416109839-c7048fc9-44c3-4553-8117-2b238d354f70.png" />
 
 
 ### Limitations
@@ -79,7 +79,7 @@ Googleは、複数のアンチスクレイピング対策を実装していま�
 
 複数回リクエストすると、おそらくGoogleのCAPTCHAチャレンジに遭遇します。
 
-<img width="700" alt="google-captcha" src="https://github.com/luminati-io/google-search-api/blob/main/images/414117571-21ab3e9f-1162-4aef-9e22-fb08491dd928.png" />
+<img width="700" alt="google-captcha" src="https://github.com/bright-jp/google-search-api/blob/main/images/414117571-21ab3e9f-1162-4aef-9e22-fb08491dd928.png" />
 
 ## Bright Data Google Search API
 [Bright Data's Google Search API](https://brightdata.jp/products/serp-api/google-search) は、カスタマイズ可能な検索パラメータを使用して、Googleから実ユーザーの検索結果を提供します。[SERP API](https://brightdata.jp/products/serp-api)と同じ先進技術に基づいて構築されており、公開データを大規模にスクレイピングする際に、高い成功率と堅牢なパフォーマンスを提供します。
@@ -98,7 +98,7 @@ Googleは、複数のアンチスクレイピング対策を実装していま�
 
 📌 [SERP Playground](https://brightdata.jp/products/serp-api/google-search)で無料でお試しください。
 
-<img width="700" alt="bright-data-serp-api-playground" src="https://github.com/luminati-io/google-search-api/blob/main/images/416966701-8d516e08-37a1-4723-bf12-9a9da6a13b1a.png" />
+<img width="700" alt="bright-data-serp-api-playground" src="https://github.com/bright-jp/google-search-api/blob/main/images/416966701-8d516e08-37a1-4723-bf12-9a9da6a13b1a.png" />
 
 
 ### Getting Started
@@ -106,7 +106,7 @@ Googleは、複数のアンチスクレイピング対策を実装していま�
 1. **Prerequisites:**
     - [Bright Data account](https://brightdata.jp/)を作成してください（新規ユーザーには$5クレジットが付与されます）
     - [API key](https://docs.brightdata.com/general/account/api-token)を取得してください
-2. **Setup:** [step-by-step guide](https://github.com/luminati-io/Google-Search-API/blob/main/setup_serp_api.md)に従って、Bright DataアカウントにSERP APIを統合してください
+2. **Setup:** [step-by-step guide](https://github.com/bright-jp/Google-Search-API/blob/main/setup_serp_api.md)に従って、Bright DataアカウントにSERP APIを統合してください
 3. **Implementation Methods:**
     - Direct API Access
     - Native Proxy-Based Access
@@ -150,7 +150,7 @@ with open("serp_direct_api.json", "w") as file:
 print("Response saved to 'serp_direct_api.json'.")
 ```
 
-👉 [full JSON output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_direct_api.json)をご覧ください。
+👉 [full JSON output](https://github.com/bright-jp/Google-Search-API/blob/main/google_search_api_outputs/serp_direct_api.json)をご覧ください。
 
 > **Note**: パース済みJSONには `brd_json=1` を使用し、パース済みJSON + 完全にネストされたHTMLには `brd_json=html` を使用してください。
 
@@ -192,14 +192,14 @@ with open("serp_native_proxy.html", "w", encoding="utf-8") as file:
 print("Response saved to 'serp_native_proxy.html'.")
 ```
 
-👉 [full HTML output](https://github.com/luminati-io/Google-Search-API/blob/main/google_search_api_outputs/serp_native_proxy.html)をご覧ください。
+👉 [full HTML output](https://github.com/bright-jp/Google-Search-API/blob/main/google_search_api_outputs/serp_native_proxy.html)をご覧ください。
 
 本番環境では、Bright DataのSSL証明書を読み込んでください（[SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate)を参照してください）。
 
 ## Advanced Features
 
 ### Localization
-<img width="700" alt="bright-data-google-search-api-screenshot-localization" src="https://github.com/luminati-io/google-search-api/blob/main/images/416281053-eb050c00-3c35-451b-a2d2-e98e16f91aee.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-localization" src="https://github.com/bright-jp/google-search-api/blob/main/images/416281053-eb050c00-3c35-451b-a2d2-e98e16f91aee.png" />
 
 
 1. `gl` (Country Code)
@@ -235,7 +235,7 @@ print("Response saved to 'serp_native_proxy.html'.")
     ```
 
 ### Search Type
-<img width="700" alt="bright-data-google-search-api-screenshot-search-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416280410-49853108-5e3d-4062-831b-8d55711d5f54.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-search-type" src="https://github.com/bright-jp/google-search-api/blob/main/images/416280410-49853108-5e3d-4062-831b-8d55711d5f54.png" />
 
 1. `tbm` (Search Category)
     - 特定の検索タイプ（画像、ニュースなど）を指定します
@@ -300,7 +300,7 @@ print("Response saved to 'serp_native_proxy.html'.")
 
 
 ### Geo-Location
-<img width="700" alt="bright-data-google-search-api-screenshot-geolocation" src="https://github.com/luminati-io/google-search-api/blob/main/images/416279186-af64c770-0c8a-4007-9415-304d2e0c0fe8.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-geolocation" src="https://github.com/bright-jp/google-search-api/blob/main/images/416279186-af64c770-0c8a-4007-9415-304d2e0c0fe8.png" />
 
 `uule` パラメータは、特定の場所に基づいて検索結果をカスタマイズします。
 
@@ -317,7 +317,7 @@ curl --proxy brd.superproxy.io:33335 \
 
 ### Device Type
 
-<img width="700" alt="bright-data-google-search-api-screenshot-device-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416278511-cf0f203f-5d62-4eb9-9d28-7a50d75c7a00.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-device-type" src="https://github.com/bright-jp/google-search-api/blob/main/images/416278511-cf0f203f-5d62-4eb9-9d28-7a50d75c7a00.png" />
 
 
 `brd_mobile` パラメータを使用して、特定デバイスからのリクエストをシミュレートします。
@@ -340,7 +340,7 @@ curl --proxy brd.superproxy.io:33335 \
 ```
 
 ### Browser Type
-<img width="700" alt="bright-data-google-search-api-screenshot-browser-type" src="https://github.com/luminati-io/google-search-api/blob/main/images/416277969-df382cb0-0eb2-4fb1-982c-2fa3401cc83a.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-browser-type" src="https://github.com/bright-jp/google-search-api/blob/main/images/416277969-df382cb0-0eb2-4fb1-982c-2fa3401cc83a.png" />
 
 `brd_browser` パラメータを使用して、特定ブラウザからのリクエストをシミュレートします。
 
@@ -395,7 +395,7 @@ curl --proxy brd.superproxy.io:33335 \
 
 ### Hotel Search
 
-<img width="700" alt="bright-data-google-search-api-screenshot-google-hotels-search" src="https://github.com/luminati-io/google-search-api/blob/main/images/416277071-0859191a-47c0-4373-b3af-a1bc04ea54b1.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-google-hotels-search" src="https://github.com/bright-jp/google-search-api/blob/main/images/416277071-0859191a-47c0-4373-b3af-a1bc04ea54b1.png" />
 
 
 以下のパラメータでホテル検索を絞り込めます。
@@ -484,7 +484,7 @@ curl -v --compressed \
 
 ### AI Overview
 
-<img width="700" alt="bright-data-google-search-api-screenshot-google-ai-overview" src="https://github.com/luminati-io/google-search-api/blob/main/images/416276209-3c7be724-e8d9-45ed-b781-017b1cbec9d4.png" />
+<img width="700" alt="bright-data-google-search-api-screenshot-google-ai-overview" src="https://github.com/bright-jp/google-search-api/blob/main/images/416276209-3c7be724-e8d9-45ed-b781-017b1cbec9d4.png" />
 
 Googleは、検索結果の上部にAI生成の要約（AI Overviews）を含めることがあります。`brd_ai_mode=1` を使用すると、これらのAI生成オーバービューが表示される可能性が高まります。
 
@@ -500,10 +500,10 @@ curl --proxy brd.superproxy.io:33335 \
 - **Documentation:** [SERP API Docs](https://docs.brightdata.com/scraping-automation/serp-api/)
 - **SEO Use Cases:** [SEO Tracking and Insights](https://brightdata.jp/use-cases/serp-tracking)
 - **Other Guides:**
-    - [SERP API](https://github.com/luminati-io/serp-api)
-    - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
-    - [Google Maps Scraper](https://github.com/luminati-io/Google-Maps-Scraper)
-    - [Google News Scraper](https://github.com/luminati-io/Google-News-Scraper)
+    - [SERP API](https://github.com/bright-jp/serp-api)
+    - [Web Unlocker API](https://github.com/bright-jp/web-unlocker-api)
+    - [Google Maps Scraper](https://github.com/bright-jp/Google-Maps-Scraper)
+    - [Google News Scraper](https://github.com/bright-jp/Google-News-Scraper)
 - **Interesting Reads:**
     - [Best SERP APIs](https://brightdata.jp/blog/web-data/best-serp-apis)
     - [Build a RAG Chatbot with SERP API](https://brightdata.jp/blog/web-data/build-a-rag-chatbot)
